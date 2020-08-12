@@ -5,8 +5,8 @@ import DiveBox from './DiveBox';
 function Profile(props) {
   return (
     <div className='profile-box'>
-      <div className='profile-info'>
-        <User userInfo={props.info} />
+      <div>
+        <User iuserInfo={props.info} />
       </div>
       <div className='dive-container'>
         <DiveBox dives={props.info.dives} />
