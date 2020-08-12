@@ -2,7 +2,8 @@ import React from 'react';
 
 function User(props) {
   return (
-    <div id='user'>
+    <div className='profile-info'>
+      <img src={`https://robohash.org/set_set2/${Math.random()}`}></img>
       <ul>
         <li>
           Name: {props.userInfo.firstName} {props.userInfo.lastName}

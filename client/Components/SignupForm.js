@@ -45,11 +45,12 @@ class SignupForm extends React.Component {
       }),
     });
     const response = await responseJSON.json();
-    console.log(response);
-    if (response.error)
+    if (response.error) {
       this.setState((prevState) => {
         return { ...prevState, incorrectInput: true };
       });
+      return;
+    }
     return this.props.logIn(response);
   }
   render() {

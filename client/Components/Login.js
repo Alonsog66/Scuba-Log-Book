@@ -23,10 +23,12 @@ class Login extends React.Component {
       `http://localhost:${PORT}/get_diver?email=${email}&password=${password}`
     );
     const response = await responseJSON.json();
-    if (response.error)
+    if (response.error) {
       this.setState((prevState) => {
         return { ...prevState, incorrectInput: true };
       });
+      return;
+    }
     return this.props.logIn(response);
   }
   render() {

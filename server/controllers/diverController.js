@@ -13,9 +13,7 @@ diverController.addDiver = async (req, res, next) => {
 
 diverController.addDive = async (req, res, next) => {
   try {
-    console.log(req.body);
     const { diverNumber, date, location, depth, visibility, notes } = req.body;
-    console.log(diverNumber, date, location, depth, visibility, notes);
     await Divers.update(
       { diverNumber },
       { $addToSet: { dives: { date, location, depth, visibility, notes } } }

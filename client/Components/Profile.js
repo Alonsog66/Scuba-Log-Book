@@ -4,11 +4,11 @@ import DiveBox from './DiveBox';
 
 function Profile(props) {
   return (
-    <div>
-      <div class='profile-box'>
+    <div className='profile-box'>
+      <div className='profile-info'>
         <User userInfo={props.info} />
       </div>
-      <div class='dive-container'>
+      <div className='dive-container'>
         <DiveBox dives={props.info.dives} />
       </div>
     </div>

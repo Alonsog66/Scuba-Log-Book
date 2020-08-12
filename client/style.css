@@ -1,9 +1,19 @@
 #main-container {
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: grey;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 
 #main-box {
@@ -12,11 +22,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  /* background-color: white; */
+  position: relative;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-#login-box,
-#profile-box {
+#login-box {
   height: 60vh;
   width: 60vh;
   display: flex;
@@ -36,28 +50,47 @@
   background-color: red;
 }
 
-#user {
-  height: 20vh;
-  width: 60vh;
+/* Instructor Styling */
+#add-dive-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: blue;
 }
 
-#dive-box {
-  margin: 0;
-  height: 80vh;
+/* Diver Profile Styling */
+.profile-box {
+  margin: 15px;
+  border: solid black;
+}
+.profile-info {
+  height: 10vh;
   width: 60vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: blue;
+}
+.profile-info img {
+  background-color: whitesmoke;
+  width: 100px;
+  height: 100px;
+  border-radius: 25%;
+  border: solid black;
+}
+
+.dive-container {
+  padding: 0.5vh 0vh;
+  width: 60vh;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: green;
-  overflow-y: scroll;
 }
 
+/* Dive box styling */
 .dive {
   margin: 1vh;
   height: 15vh;
