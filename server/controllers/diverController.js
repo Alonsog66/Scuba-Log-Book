@@ -13,11 +13,15 @@ diverController.addDiver = async (req, res, next) => {
 
 diverController.addDive = async (req, res, next) => {
   try {
+    console.log(req.body);
     const { diverNumber, date, location, depth, visibility, notes } = req.body;
+    console.log(diverNumber, date, location, depth, visibility, notes);
     await Divers.update(
       { diverNumber },
       { $addToSet: { dives: { date, location, depth, visibility, notes } } }
     );
+    const diver = await Divers.findOne({ diverNumber });
+    res.locals.diver = diver;
     next();
   } catch (err) {
     next(err);
@@ -25,12 +29,18 @@ diverController.addDive = async (req, res, next) => {
 };
 
 diverController.getDiver = async (req, res, next) => {
+  const { email, password } = req.query;
   try {
-    const diver = await Divers.find({ diverNumber: req.body.diverNumber });
+    const diver = await Divers.findOne({ email });
+    if (diver.password !== password || !diver)
+      return next({ err: 'Diver not found' });
     res.locals.diver = diver;
-    next();
+    return next();
   } catch (err) {
-    next(err);
+    return next({
+      log: err,
+      err: 'Diver not found',
+    });
   }
 };
 

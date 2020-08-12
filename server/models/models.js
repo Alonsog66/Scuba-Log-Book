@@ -16,6 +16,8 @@ mongoose
 // sets a schema for the 'species' collection
 const diverSchema = new mongoose.Schema({
   diverNumber: { type: String, unique: true },
+  firstName: String,
+  lastName: String,
   email: String,
   password: String,
   dives: [],

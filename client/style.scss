@@ -16,7 +16,8 @@
   background-color: white;
 }
 
-#login-box {
+#login-box,
+#profile-box {
   height: 60vh;
   width: 60vh;
   display: flex;
@@ -25,6 +26,7 @@
   align-items: center;
   background-color: grey;
 }
+
 #signup-box {
   height: 10vh;
   width: 60vh;
@@ -33,4 +35,48 @@
   justify-content: center;
   align-items: center;
   background-color: red;
+}
+
+#user {
+  height: 20vh;
+  width: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+}
+
+#dive-box {
+  padding: 0;
+  margin: 0;
+  height: 40vh;
+  width: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  overflow-y: scroll;
+}
+
+.dive {
+  margin: 1vh;
+  height: 15vh;
+  width: 40vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+}
+.dive-left,
+.dive-right {
+  margin: 0;
+  margin: 1vh;
+  height: 15vh;
+  width: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: grey;
 }
