@@ -6,6 +6,7 @@ class Login extends React.Component {
     this.state = {
       info: ['', ''],
       incorrectInput: false,
+      instructor: false,
     };
     this.handleChange = this.handleChange.bind(this);
     this.submitInfo = this.submitInfo.bind(this);
@@ -15,9 +16,11 @@ class Login extends React.Component {
     arr[i] = event.target.value;
     this.setState({ info: arr });
   }
+
   async submitInfo(email, password) {
+    const PORT = process.env.NODE_ENV === 'development' ? 8080 : 3000;
     const responseJSON = await fetch(
-      `http://localhost:8080/get_diver?email=${email}&password=${password}`
+      `http://localhost:${PORT}/get_diver?email=${email}&password=${password}`
     );
     const response = await responseJSON.json();
     if (response.error)
@@ -44,11 +47,11 @@ class Login extends React.Component {
             <label>Email:</label>
             <input type='text' onChange={(e) => this.handleChange(e, 0)} />
           </div>
-
           <div>
             <label>Password:</label>
-            <input type='text' onChange={(e) => this.handleChange(e, 1)} />
+            <input type='password' onChange={(e) => this.handleChange(e, 1)} />
           </div>
+
           <input type='submit' />
         </form>
       </div>

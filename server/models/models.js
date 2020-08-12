@@ -18,8 +18,9 @@ const diverSchema = new mongoose.Schema({
   diverNumber: { type: String, unique: true },
   firstName: String,
   lastName: String,
-  email: String,
+  email: { type: String, unique: true },
   password: String,
+  instructor: Boolean,
   dives: [],
 });
 

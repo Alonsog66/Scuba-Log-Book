@@ -4,9 +4,13 @@ import DiveBox from './DiveBox';
 
 function Profile(props) {
   return (
-    <div id='profile-box'>
-      <User userInfo={props.info} />
-      <DiveBox dives={props.info.dives} />
+    <div>
+      <div class='profile-box'>
+        <User userInfo={props.info} />
+      </div>
+      <div class='dive-container'>
+        <DiveBox dives={props.info.dives} />
+      </div>
     </div>
   );
 }

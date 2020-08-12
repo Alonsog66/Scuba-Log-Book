@@ -7,7 +7,7 @@ function Dive(props) {
   return (
     <div className='dive'>
       <DiveLeft
-        key={date}
+        key={'Dive' + date}
         date={date}
         depth={depth}
         location={location}

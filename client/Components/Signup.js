@@ -1,9 +1,11 @@
 import React from 'react';
 
-function Signup() {
+function Signup(props) {
   return (
     <div id='signup-box'>
-      <button>Signup Here!</button>
+      <button onClick={props.signup}>
+        {props.signupForm ? ' Login Here!' : 'Signup Here!'}
+      </button>
     </div>
   );
 }

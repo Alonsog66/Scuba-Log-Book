@@ -7,7 +7,6 @@
 }
 
 #main-box {
-  height: 90vh;
   width: 90vh;
   display: flex;
   flex-direction: column;
@@ -48,9 +47,8 @@
 }
 
 #dive-box {
-  padding: 0;
   margin: 0;
-  height: 40vh;
+  height: 80vh;
   width: 60vh;
   display: flex;
   flex-direction: column;
