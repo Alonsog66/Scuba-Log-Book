@@ -20,6 +20,7 @@ class Instructor extends React.Component {
     const PORT = process.env.NODE_ENV === 'development' ? 8080 : 3000;
     const responseJSON = await fetch(`http://localhost:${PORT}/get_divers`);
     const response = await responseJSON.json();
+
     this.setState((prevState) => {
       return {
         ...prevState,

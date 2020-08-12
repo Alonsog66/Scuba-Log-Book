@@ -1,19 +1,21 @@
-#main-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: rgb(2, 0, 36);
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0, auto;
+  background-repeat: repeat;
+  background-size: cover;
   background: linear-gradient(
     0deg,
     rgba(2, 0, 36, 1) 0%,
     rgba(9, 9, 121, 1) 35%,
     rgba(0, 212, 255, 1) 100%
   );
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+}
+
+#main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #main-box {
@@ -22,7 +24,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-color: white; */
   position: relative;
   top: 0;
   right: 0;

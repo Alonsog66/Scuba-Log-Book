@@ -6,7 +6,7 @@ function Profile(props) {
   return (
     <div className='profile-box'>
       <div>
-        <User iuserInfo={props.info} />
+        <User userInfo={props.info} />
       </div>
       <div className='dive-container'>
         <DiveBox dives={props.info.dives} />
