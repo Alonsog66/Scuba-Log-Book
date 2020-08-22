@@ -34,6 +34,13 @@ class Login extends React.Component {
   render() {
     return (
       <div id='login-box'>
+        <center>
+          <h2>
+            <u>
+              <b>Log In</b>
+            </u>
+          </h2>
+        </center>
         <form
           action=''
           value='Update'
@@ -43,7 +50,7 @@ class Login extends React.Component {
           }}
         >
           {!this.state.incorrectInput || (
-            <p className='error'>Incorrect username and/or password!</p>
+            <p className='error'>Incorrect email and/or password!</p>
           )}
           <div>
             <label>Email:</label>
@@ -53,8 +60,10 @@ class Login extends React.Component {
             <label>Password:</label>
             <input type='password' onChange={(e) => this.handleChange(e, 1)} />
           </div>
-
-          <input type='submit' />
+          <br></br>
+          <center>
+            <input className='myButton' type='submit' />
+          </center>
         </form>
       </div>
     );

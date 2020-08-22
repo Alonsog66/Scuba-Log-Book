@@ -15,6 +15,7 @@ class MainBox extends React.Component {
       isInstructor: false,
     };
     this.logIn = this.logIn.bind(this);
+    this.logOut = this.logOut.bind(this);
     this.signup = this.signup.bind(this);
   }
 
@@ -37,6 +38,14 @@ class MainBox extends React.Component {
       };
     });
   }
+  logOut() {
+    this.setState({
+      isLoggedIn: false,
+      userInfo: {},
+      signupForm: false,
+      isInstructor: false,
+    });
+  }
 
   render() {
     return (
@@ -45,23 +54,31 @@ class MainBox extends React.Component {
         {this.state.isLoggedIn ? (
           this.state.isInstructor ? (
             <div>
+              <div id='text' className='logOut' onClick={this.logOut}>
+                Log out
+              </div>
               <Instructor />
             </div>
           ) : (
             <div>
+              <div id='text' className='logOut2' onClick={this.logOut}>
+                Log out
+              </div>
               <Profile info={this.state.userInfo} />
             </div>
           )
         ) : this.state.signupForm ? (
           // Sign up form
-          <div>
+          <div className='jeho-box'>
             <SignupForm logIn={this.logIn} />
+            <br></br>
             <Signup signupForm={this.state.signupForm} signup={this.signup} />
           </div>
         ) : (
           // Log in form
-          <div>
+          <div className='jeho-box'>
             <Login logIn={this.logIn} />
+            <br></br>
             <Signup signupForm={this.state.signupForm} signup={this.signup} />
           </div>
         )}

@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const divers = require('./controllers/diverController.js');
+const sessionController = require('./controllers/sessionController.js');
+const cookieController = require('./controllers/cookieController.js');
 
 const PORT = 3000;
 
@@ -10,14 +12,22 @@ app.use(express.json());
 app.use('/', express.static('dist'));
 
 // Diver Requests
-app.post('/add_diver', divers.addDiver, (req, res) =>
-  res.status(200).send(res.locals.diver)
+app.post(
+  '/add_diver',
+  divers.addDiver,
+  cookieController.setSSIDCookie,
+  (req, res) => res.status(200).send(res.locals.diver)
 );
 
-app.get('/get_diver', divers.getDiver, (req, res) => {
-  console.log(res.locals);
-  return res.status(200).send(res.locals.diver);
-});
+app.get(
+  '/get_diver',
+  divers.getDiver,
+  cookieController.setSSIDCookie,
+  (req, res) => {
+    console.log(res.locals);
+    return res.status(200).send(res.locals.diver);
+  }
+);
 
 // Instructor Requests
 app.get('/get_divers', divers.getDivers, (req, res) =>

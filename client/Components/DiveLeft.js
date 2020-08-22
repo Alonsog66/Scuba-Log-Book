@@ -4,10 +4,10 @@ function DiveLeft({ date, depth, location, visibility }) {
   return (
     <div className='dive-left'>
       <ul>
-        <li> date: {date}</li>
-        <li>depth: {depth}</li>
-        <li>location: {location}</li>
-        <li>visibility: {visibility}</li>
+        <li> Date: {date}</li>
+        <li>Depth: {depth}</li>
+        <li>Location: {location}</li>
+        <li>Visibility: {visibility}</li>
       </ul>
     </div>
   );

@@ -1,0 +1,232 @@
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0, auto;
+  background: linear-gradient(
+    0deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: 'Oleo Script', Helvetica, sans-serif;
+  font-size: 120%;
+  color: #2b2b2b;
+  text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.1);
+}
+ul {
+  list-style-type: none;
+}
+
+#main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jeho-box {
+  padding: 10vh;
+  border: solid 5px black;
+  border-radius: 20px;
+  background-color: #cc8800;
+  background-image: url('https://www.transparenttextures.com/patterns/binding-light.png');
+}
+
+#main-box {
+  width: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: grey; */
+}
+
+#signup-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* background-color: red; */
+}
+
+/* Instructor Styling */
+#add-dive-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Diver Profile Styling */
+.profile-box {
+  margin: 15px;
+  border: solid black;
+  background-color: white;
+}
+.profile-info {
+  height: 10vh;
+  width: 60vh;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: rgba(50, 115, 220, 0.3);
+}
+.profile-info img {
+  background-color: whitesmoke;
+  width: 75px;
+  height: 75px;
+  border-radius: 25%;
+  border: solid black;
+}
+
+.dive-container {
+  padding: 0.5vh 0vh;
+  width: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  background-color: rgba(50, 115, 220, 0.5);
+}
+
+/* Dive box styling */
+.dive {
+  margin: 1vh;
+  height: 15vh;
+  width: 40vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid black;
+  background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=ffffffff&noise=5c5c5c&density=13&opacity=62);
+}
+.dive-left,
+.dive-right {
+  line-height: 1.6;
+  padding: 0;
+  margin: 0;
+  margin: 1vh;
+  height: 15vh;
+  width: 20vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+
+  background-image: linear-gradient(
+    0deg,
+    transparent 5em,
+    rgba(255, 0, 0, 0.2) 0,
+    transparent 5.1em
+  );
+  background-size: 100% 2em;
+}
+
+/* Buttons */
+.logOut {
+  text-align: center;
+  position: relative;
+  top: 4vh;
+  left: 15vh;
+  cursor: pointer;
+}
+
+.logOut2 {
+  text-align: center;
+  position: relative;
+  top: 4vh;
+  left: 25vh;
+  cursor: pointer;
+}
+
+/* Paper */
+
+/* Inputs */
+input[type='text'],
+input[type='password'],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+input[type='text'],
+input[type='password'] {
+  text-rendering: auto;
+  color: -internal-light-dark(black, white);
+  letter-spacing: normal;
+  word-spacing: normal;
+  text-transform: none;
+  text-indent: 0px;
+  text-shadow: none;
+  display: inline-block;
+  text-align: start;
+  appearance: textfield;
+  background-color: -internal-light-dark(rgb(255, 255, 255), rgb(59, 59, 59));
+
+  margin-bottom: 10px;
+  cursor: text;
+}
+.myButton {
+  box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+  background: linear-gradient(to bottom, #fc8d83 5%, #e4685d 100%);
+  background-color: #fc8d83;
+  border-radius: 6px;
+  border: 1px solid #d83526;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #b23e35;
+}
+.myButton:hover {
+  background: linear-gradient(to bottom, #e4685d 5%, #fc8d83 100%);
+  background-color: #e4685d;
+}
+.myButton:active {
+  position: relative;
+  top: 1px;
+}
+
+.secondBtn {
+  box-shadow: inset 0px 1px 0px 0px #dcecfb;
+  background: linear-gradient(to bottom, #bddbfa 5%, #80b5ea 100%);
+  background-color: #bddbfa;
+  border-radius: 6px;
+  border: 1px solid #84bbf3;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 15px;
+  font-weight: bold;
+  padding: 6px 24px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528ecc;
+}
+.secondBtn:hover {
+  background: linear-gradient(to bottom, #80b5ea 5%, #bddbfa 100%);
+  background-color: #80b5ea;
+}
+.secondBtn:active {
+  position: relative;
+  top: 1px;
+}

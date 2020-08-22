@@ -11,7 +11,13 @@ class DiveBox extends React.Component {
         <center>
           <strong>Recorded Dives</strong>
         </center>
-        {diveArr}
+        {diveArr.length ? (
+          diveArr
+        ) : (
+          <center>
+            <h4>No current dives to show. Go diving!</h4>
+          </center>
+        )}
       </div>
     );
   }

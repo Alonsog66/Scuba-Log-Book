@@ -56,6 +56,13 @@ class SignupForm extends React.Component {
   render() {
     return (
       <div id='login-box'>
+        <center>
+          <h2>
+            <u>
+              <b>Sign Up</b>
+            </u>
+          </h2>
+        </center>
         <form
           action=''
           value='Update'
@@ -98,7 +105,11 @@ class SignupForm extends React.Component {
             <label>Instructor: </label>
             <input type='checkbox' onChange={this.handleClick} />
           </div>
-          <input type='submit' />
+          <br></br>
+          <center>
+            {' '}
+            <input className='myButton' type='submit' />
+          </center>
         </form>
       </div>
     );
