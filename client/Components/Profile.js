@@ -3,6 +3,7 @@ import User from './User';
 import DiveBox from './DiveBox';
 
 function Profile(props) {
+  console.log('USER INFO:', props)
   return (
     <div className='profile-box'>
       <div>
